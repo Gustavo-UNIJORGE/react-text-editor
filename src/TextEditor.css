@@ -1,0 +1,27 @@
+div.text-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+div.text-editor input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+div.text-editor textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
