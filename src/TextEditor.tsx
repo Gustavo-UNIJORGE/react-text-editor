@@ -13,13 +13,12 @@ const TextEditor = ({
     const inputRef = useRef(null);
     const textareaRef = useRef(null);
     
-
     useEffect(() => {
         setTitle(titleValue);
         setText(textValue);
     }, [titleValue, textValue]);
 
-    
+    // Altera titulo
     const handleTitleChange = (e: React.ChangeEvent) => {
         const newTitle = e.target.value;
         setTitle(newTitle);
@@ -28,6 +27,7 @@ const TextEditor = ({
         }
     }
 
+    // Altera texto
     const handleTextChange = (e: React.ChangeEvent) => {
         const newText = e.target.value;
         setText(newText);

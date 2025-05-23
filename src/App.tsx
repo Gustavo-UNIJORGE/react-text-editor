@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TextEditor from './TextEditor';
 import './assets/styles/App.css'
+import TextPreview from './TextPreview';
 
 function App() {
   const [title, setTitle] = useState(''); 
@@ -21,15 +22,10 @@ function App() {
         rows={3}
       />
       
-      <div className='text-preview'>
-        <div>
-          <span className='preview-badge'>Pré-visualização:</span>
-        </div>
-        <pre>
-          <h3>{title || 'Documento sem titulo'}</h3>
-            {text || '(vazio)'}
-        </pre>
-      </div>
+      <TextPreview 
+        title={title} 
+        text={text} 
+      ></TextPreview>
     </main>
   )
 }
