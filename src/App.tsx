@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import TextEditor from './TextEditor';
-import './App.css'
+import './assets/styles/App.css'
 
 function App() {
   const [title, setTitle] = useState(''); 
@@ -11,9 +11,8 @@ function App() {
     setText(_text);
   }
   return (
-    <>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h1>Editor de Texto Simples</h1>
+    <main>
+      <span>Editor de Texto Simples</span>
       <TextEditor 
         titleValue={title}
         textValue={text}
@@ -22,20 +21,16 @@ function App() {
         rows={3}
       />
       
-      <div style={{ marginTop: '20px' }}>
-        <h2>Pré-visualização:</h2>
-        <h3>{title || 'Documento sem titulo'}</h3>
-        <pre style={{ 
-          whiteSpace: 'pre-wrap',
-          padding: '15px',
-          backgroundColor: '#f5f5f5',
-          borderRadius: '4px'
-          }}>
+      <div className='text-preview'>
+        <div>
+          <span className='preview-badge'>Pré-visualização:</span>
+        </div>
+        <pre>
+          <h3>{title || 'Documento sem titulo'}</h3>
             {text || '(vazio)'}
         </pre>
       </div>
-    </div>
-    </>
+    </main>
   )
 }
 

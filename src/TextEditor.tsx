@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, type ChangeEvent } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const TextEditor = ({
     titleValue = '',
@@ -13,32 +13,12 @@ const TextEditor = ({
     const inputRef = useRef(null);
     const textareaRef = useRef(null);
     
-    // Atualiza o estado interno quando a prop value muda
-/*     useEffect(() => {
-        setText(textValue);
-    }, [textValue]); */
 
     useEffect(() => {
         setTitle(titleValue);
         setText(textValue);
     }, [titleValue, textValue]);
 
-    /* const handleChange = (e: ChangeEvent) => {
-        if (e.target) {
-            if (e.target === inputRef.current) {
-                const newTitle = e.target.value;
-                setTitle(newTitle);
-            } 
-            if (e.target === textareaRef.current) {
-                const newText = e.target.value;
-                setText(newText);
-            }
-            
-        }
-        if (onChange) {
-            onChange(title, text);
-        }
-    }; */
     
     const handleTitleChange = (e: React.ChangeEvent) => {
         const newTitle = e.target.value;
