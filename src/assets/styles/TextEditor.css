@@ -41,17 +41,38 @@ div.text-preview {
     border-radius: '4px';
 }
 
-div.text-preview span.preview-badge {
+div.text-preview button.preview-badge {
     color: #4040c9;
     font-weight: 600;
     border: 2px solid #4040c9; 
     border-radius: 16px;
     padding: 4px 12px;
+    outline: none;
+}
+
+div.text-preview button.preview-badge.active {
+    color: #353536;
+    font-weight: 600;
+    border: 2px solid #353536; 
+    border-radius: 16px;
+    padding: 4px 12px;
+}
+
+
+div.text-preview button.preview-badge:hover {
+    color: #eee;
+    font-weight: 600;
+    border-color: #eee; 
+    background-color: #4040c9;
+    transition: all 0.5s ease-in-out;
 }
 
 div.text-preview pre {
+    margin-top: 1em;
     text-align: justify;
-    
+}
+div.text-preview pre.hidden {
+    display: none;
 }
 div.text-preview h3{
     font-size: 1.75em;

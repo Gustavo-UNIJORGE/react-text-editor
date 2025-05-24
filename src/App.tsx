@@ -25,6 +25,7 @@ function App() {
       <TextPreview 
         title={title} 
         text={text} 
+        isHidden={false}
       ></TextPreview>
     </main>
   )
