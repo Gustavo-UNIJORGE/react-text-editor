@@ -9,24 +9,20 @@ const TextPreview = ({
     const buttonRef = useRef<HTMLButtonElement>(null);
     const previewRef = useRef<HTMLPreElement>(null);
 
+    // Atualiza o componente ao inicia-lo
     useEffect(() => {
         setHidden(isHidden)
     }, [isHidden])
-
-/*     const handleButtonClick = (e) => {
-        if (e.target && e.target === buttonRef.current && buttonRef.current) {
-            const classname = e.target.classList;
-            setHidden(classname.toggle('active'))
-        }
-    } */
-
+    
+    // Causa efeito na classe do preview a partir do useState(hidden)
     useEffect(() => {
         if (previewRef.current)
             previewRef.current.classList.toggle('hidden', hidden);
     }, [hidden])
 
+    // Ativa ou desativa o preview
     const togglePreview = () => {
-       setHidden(previousHidden => !previousHidden)
+        setHidden(previousHidden => !previousHidden)
     }
 
     return(

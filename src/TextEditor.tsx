@@ -13,6 +13,7 @@ const TextEditor = ({
     const inputRef = useRef(null);
     const textareaRef = useRef(null);
     
+    // Atualiza o componente ao inicia-lo
     useEffect(() => {
         setTitle(titleValue);
         setText(textValue);
